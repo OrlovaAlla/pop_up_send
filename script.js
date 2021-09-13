@@ -63,11 +63,11 @@ document.addEventListener('DOMContentLoaded', function(){
         });
         if(response.ok){
           console.log(response.ok);
-          alert("Запрос отрпавлен");
+          alert("Запрос отправлен");
           f_e_mailv.reset();
           f_phonev.reset();
         } else {
-          alert("Ошибка");
+          alert("Запрос не ушел");
         }
 
       });
