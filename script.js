@@ -41,8 +41,6 @@ document.addEventListener('DOMContentLoaded', function(){
       button_pop_up.addEventListener("click", function(){
         let f_e_mailv = f_e_mail.value;
         let f_phonev = f_phone.value;
-        console.log(f_e_mail.value);
-        console.log(f_phone.value);
         
         if(f_e_mailv == ""){
           alert("Не заполнено: e-mail");
@@ -61,9 +59,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
         let response = fetch('send.php', {
           method: 'POST',
-          body: formData
+          body: formData         
         });
-
+        if(response.ok){
+          console.log(response.ok);
+          alert("Запрос отрпавлен");
+          f_e_mailv.reset();
+          f_phonev.reset();
+        } else {
+          alert("Ошибка");
+        }
 
       });
     
