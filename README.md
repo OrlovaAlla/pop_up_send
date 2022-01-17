@@ -1,1 +1,3 @@
-# pop_up_send
+Адаптив;
+Отрпавка данных на e-mail;
+/HTML,CSS,JS,PHP/
